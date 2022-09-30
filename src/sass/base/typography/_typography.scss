@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  color: $color__text-main;
+  font-family: $font__main;
+  font-size: 16px;
+  line-height: $font__line-height-body;
+}
+
+@import 'headings';
+@import 'copy';
