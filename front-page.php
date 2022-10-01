@@ -13,13 +13,18 @@
  */
 
 get_header();
+
+
+get_template_part('template-parts/front-page/hero', 'hero');
+
+
 ?>
 
-	<main id="primary" class="site-main grid-centered">
+  <main id="primary" class="site-main content-grid">
 
 
+  </main><!-- #main -->
 
-	</main><!-- #main -->
 
 <?php
 get_sidebar();

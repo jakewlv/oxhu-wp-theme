@@ -1,0 +1,11 @@
+.hero {
+  height: 100rem;
+  background-color: $color__bgDark;
+  background: url('http://oxhu.local/wp-content/uploads/2022/10/hero.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  &__inner {
+    padding: 0 15.5rem;
+  }
+}

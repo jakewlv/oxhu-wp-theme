@@ -851,7 +851,7 @@ textarea {
   padding: 3rem;
   display: block;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 .main-menu__link:hover {
   background-color: rgba(234, 234, 234, 0.05);
@@ -864,6 +864,70 @@ textarea {
   border-top: solid 5px #e52323;
   padding: 2.5rem 3rem 3rem;
   background-color: rgba(234, 234, 234, 0.05);
+}
+
+/* Hero
+--------------------------------------------- */
+.hero {
+  height: 100rem;
+  background-color: #121416;
+  background: url("http://oxhu.local/wp-content/uploads/2022/10/hero.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+.hero__inner {
+  padding: 0 15.5rem;
+}
+
+.caption {
+  padding: 10rem 0;
+  max-width: 72rem;
+  color: #fff;
+}
+.caption__text {
+  margin-bottom: 6rem;
+}
+.caption__eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 2.825rem;
+  font-weight: 600;
+  color: #e4e4e4;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.caption__title {
+  margin: 1.5rem 0;
+  text-transform: uppercase;
+  color: inherit;
+  font-size: 6.58rem;
+  line-height: 6.58rem;
+  font-weight: 800;
+  text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+.caption__title span {
+  color: #e52323;
+}
+.caption__subtitle {
+  font-size: 1.8rem;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.caption__btn {
+  padding: 18px 48px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.82rem;
+  font-weight: 700;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%), #e52323;
+  border-radius: 8px;
+  outline: none;
+}
+.caption__btn:visited {
+  color: #fff;
+}
+.caption__btn:focus {
+  outline: none;
 }
 
 /* Posts and pages
