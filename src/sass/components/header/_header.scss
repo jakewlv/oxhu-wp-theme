@@ -1,3 +1,10 @@
 .header {
   display: flex;
+  justify-content: space-between;
+  background-color: $color__bgDark;
+  padding: 0 6rem;
+}
+
+.site-branding {
+  line-height: 0;
 }

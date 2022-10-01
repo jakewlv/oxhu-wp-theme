@@ -27,11 +27,11 @@ language_attributes(); ?>>
 body_class(); ?>>
 <?php
 wp_body_open(); ?>
-<div id="page" class="site">
+<div id="page" class="site content-grid">
   <a class="skip-link screen-reader-text" href="#primary"><?php
       esc_html_e('Skip to content', 'oxhu'); ?></a>
 
-  <header id="header" class="header">
+  <header id="header" class="header grid-full-width">
     <div class="site-branding">
         <?php
         the_custom_logo();

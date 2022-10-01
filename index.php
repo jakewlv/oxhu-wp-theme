@@ -15,7 +15,8 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="primary" class="site-main grid-centered">
+     <h1 class='entry-title'> <?php single_post_title(); ?> </h1>
 
 		<?php
 		if ( have_posts() ) :

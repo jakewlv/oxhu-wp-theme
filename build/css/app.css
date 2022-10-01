@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap);
+@import url(https://use.typekit.net/fbx8het.css);
 /*!
 Theme Name: oxhu
 Theme URI: http://underscores.me/
@@ -378,6 +379,41 @@ html {
   box-sizing: border-box;
 }
 
+/* Box sizing
+--------------------------------------------- */
+.grid-centered {
+  grid-column: center-start/center-end !important;
+  display: grid;
+}
+
+.grid-full-width {
+  grid-column: full-start/full-end !important;
+  display: grid;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] minmax(min-content, 144rem) [center-end] minmax(4rem, 1fr) [full-end];
+}
+.content-grid--4-col-pad {
+  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 30rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+}
+.content-grid--8-col-pad {
+  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+}
+.content-grid--12-col-pad {
+  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+}
+.content-grid--4-col {
+  grid-template-columns: repeat(4, [col-start] minmax(min-content, 30rem) [col-end]);
+}
+.content-grid--8-col {
+  grid-template-columns: repeat(8, [col-start] minmax(min-content, 15rem) [col-end]);
+}
+.content-grid--12-col {
+  grid-template-columns: repeat(12, [col-start] minmax(min-content, 10rem) [col-end]);
+}
+
 /*--------------------------------------------------------------
 # Base
 --------------------------------------------------------------*/
@@ -470,9 +506,10 @@ textarea {
   text-rendering: optimizeLegibility;
   font-smooth: always;
   color: #616161;
-  font-family: "Lato", sans-serif;
+  font-family: realist, sans-serif;
   font-size: 16px;
   line-height: 1.75;
+  font-weight: 300;
 }
 
 h1,
@@ -482,6 +519,7 @@ h4,
 h5,
 h6 {
   clear: both;
+  color: #101010;
 }
 
 p {
@@ -543,7 +581,7 @@ html {
 }
 
 body {
-  background: #121416;
+  background: #ffffff;
 }
 
 hr {
@@ -707,6 +745,13 @@ textarea {
 --------------------------------------------- */
 .header {
   display: flex;
+  justify-content: space-between;
+  background-color: #121416;
+  padding: 0 6rem;
+}
+
+.site-branding {
+  line-height: 0;
 }
 
 /* Footer
@@ -806,6 +851,7 @@ textarea {
   padding: 3rem;
   display: block;
   text-decoration: none;
+  font-weight: 500;
 }
 .main-menu__link:hover {
   background-color: rgba(234, 234, 234, 0.05);

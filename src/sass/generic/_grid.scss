@@ -1,0 +1,64 @@
+$max-width: 144rem !default;
+$page-padding: minmax(4rem, 1fr);
+$full-width: full-start / full-end;
+$centered: center-start / center-end;
+
+.grid-centered {
+  grid-column: $centered !important;
+  display: grid;
+}
+
+.grid-full-width {
+  grid-column: $full-width !important;
+  display: grid;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns:
+    [full-start] $page-padding [center-start]
+    minmax(min-content, $max-width)
+    [center-end] $page-padding [full-end];
+
+  &--4-col-pad {
+    grid-template-columns:
+      [full-start] $page-padding [center-start]
+      repeat(4, [col-start] minmax(min-content, 30rem) [col-end])
+      [center-end] $page-padding [full-end];
+  }
+
+  &--8-col-pad {
+    grid-template-columns:
+      [full-start] $page-padding [center-start]
+      repeat(8, [col-start] minmax(min-content, 15rem) [col-end])
+      [center-end] $page-padding [full-end];
+  }
+
+  &--12-col-pad {
+    grid-template-columns:
+      [full-start] $page-padding [center-start]
+      repeat(12, [col-start] minmax(min-content, 10rem) [col-end])
+      [center-end] $page-padding [full-end];
+  }
+
+  &--4-col {
+    grid-template-columns: repeat(
+      4,
+      [col-start] minmax(min-content, 30rem) [col-end]
+    );
+  }
+
+  &--8-col {
+    grid-template-columns: repeat(
+      8,
+      [col-start] minmax(min-content, 15rem) [col-end]
+    );
+  }
+
+  &--12-col {
+    grid-template-columns: repeat(
+      12,
+      [col-start] minmax(min-content, 10rem) [col-end]
+    );
+  }
+}
