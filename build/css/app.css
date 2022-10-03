@@ -578,6 +578,7 @@ big {
 --------------------------------------------- */
 html {
   font-size: 62.5%;
+  background-color: rgb(18, 20, 22);
 }
 
 body {
@@ -744,10 +745,17 @@ textarea {
 /* Header
 --------------------------------------------- */
 .header {
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: #121416;
   padding: 0 6rem;
+  z-index: 1;
+}
+.header--page {
+  background-color: rgb(18, 20, 22);
 }
 
 .site-branding {
@@ -869,21 +877,35 @@ textarea {
 /* Hero
 --------------------------------------------- */
 .hero {
-  height: 100rem;
-  background-color: #121416;
-  background: url("http://oxhu.local/wp-content/uploads/2022/10/hero.webp");
+  background-color: #000;
+  position: relative;
+  min-height: 95rem;
+  max-width: 254rem;
+  align-items: center;
+}
+.hero:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("http://oxhu.local/wp-content/uploads/2022/10/hero-1-1.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
+  opacity: 0.8;
 }
 .hero__inner {
   padding: 0 15.5rem;
+  position: relative;
 }
 
 .caption {
-  padding: 10rem 0;
   max-width: 72rem;
   color: #fff;
+  margin-bottom: 6rem;
 }
 .caption__text {
   margin-bottom: 6rem;
@@ -892,7 +914,7 @@ textarea {
   margin: 0;
   text-transform: uppercase;
   font-size: 2.825rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #e4e4e4;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
@@ -930,6 +952,56 @@ textarea {
   outline: none;
 }
 
+.reviews {
+  color: #fff;
+}
+.reviews__images {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.reviews__review {
+  background-color: #e52323;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.reviews__review span {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.reviews__review {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+.reviews__review:not(:first-child) {
+  margin-left: -2.2rem;
+}
+.reviews__text {
+  display: flex;
+  gap: 1rem;
+}
+.reviews__reviews-number {
+  color: inherit;
+  text-decoration: none;
+}
+.reviews__reviews-number:visited {
+  color: inherit;
+}
+.reviews__reviews-number:hover {
+  text-decoration: underline;
+}
+.reviews__stars {
+  line-height: 1;
+  display: flex;
+  gap: 0.4rem;
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
@@ -954,9 +1026,7 @@ textarea {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
-}
-
-/* Comments
+} /* Comments
 --------------------------------------------- */
 .comment-content a {
   word-wrap: break-word;
@@ -1145,6 +1215,10 @@ textarea {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.5em;
+}
+
+.pad-top {
+  padding-top: 8.8rem;
 }
 
 /*# sourceMappingURL=app.css.map*/

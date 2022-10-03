@@ -1,8 +1,16 @@
 .header {
+  position: fixed;
+  top: 0;
+  transition: top 0.2s ease-in-out;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: $color__bgDark;
   padding: 0 6rem;
+  z-index: 1;
+
+  &--page {
+    background-color: $color__bgDark;
+  }
 }
 
 .site-branding {

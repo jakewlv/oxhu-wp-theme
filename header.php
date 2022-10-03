@@ -31,7 +31,7 @@ wp_body_open(); ?>
   <a class="skip-link screen-reader-text" href="#primary"><?php
       esc_html_e('Skip to content', 'oxhu'); ?></a>
 
-  <header id="header" class="header grid-full-width">
+  <header id="header" class="header  <?php echo apply_filters('input_class', ''); ?> grid-full-width">
     <div class="site-branding">
         <?php
         the_custom_logo();
@@ -51,26 +51,13 @@ wp_body_open(); ?>
         $oxhu_description = get_bloginfo('description', 'display');
         if ($oxhu_description || is_customize_preview()) :
             ?>
-<!--          <p class="site-description">--><?php
-//              echo $oxhu_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-//              ?><!--</p>-->
+          <p class="site-description"><?php
+              echo $oxhu_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+
+              ?></p>
         <?php
         endif; ?>
-    </div><!-- .site-branding -->
-
-    <!--		<nav id="site-navigation" class="main-navigation">-->
-    <!--			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">-->
-      <?php
-      //esc_html_e( 'Primary Menu', 'oxhu' ); ?><!--</button>-->
-    <!--			--><?php
-      //			wp_nav_menu(
-      //				array(
-      //					'theme_location' => 'menu-1',
-      //					'menu_id'        => 'primary-menu',
-      //				)
-      //			);
-      //			?>
-    <!--		</nav>-->
+    </div>
 
 
     <nav id='main-menu' class="main-menu">
@@ -82,6 +69,19 @@ wp_body_open(); ?>
             'container'       => '',
             'list_item_class' => 'main-menu__list-item',
             'link_class'      => 'main-menu__link'
+        ));
+        ?>
+    </nav>
+
+        <nav id='member-menu' class="member-menu">
+        <?php
+        wp_nav_menu(array(
+            'theme_location'  => 'member-menu',
+            'menu_class'      => 'member-menu__list',
+            'items_wrap'      => '<ul class="%2$s" role="list" >%3$s</ul>',
+            'container'       => '',
+            'list_item_class' => 'member-menu__list-item',
+            'link_class'      => 'member-menu__link'
         ));
         ?>
     </nav>

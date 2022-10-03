@@ -51,6 +51,7 @@ function oxhu_setup()
     // This theme uses wp_nav_menu() in one location.
     register_nav_menus(array(
         'main-menu' => esc_html__('Main Menu', 'oxhu'),
+         'member-menu' => esc_html__('Member Menu', 'oxhu'),
     ));
 
     /*
@@ -69,9 +70,9 @@ function oxhu_setup()
 
     // Set up the WordPress core custom background feature.
     add_theme_support('custom-background', apply_filters('oxhu_custom_background_args', array(
-                'default-color' => 'ffffff',
-                'default-image' => '',
-            )));
+        'default-color' => 'ffffff',
+        'default-image' => '',
+    )));
 
     // Add theme support for selective refresh for widgets.
     add_theme_support('customize-selective-refresh-widgets');
@@ -82,11 +83,11 @@ function oxhu_setup()
      * @link https://codex.wordpress.org/Theme_Logo
      */
     add_theme_support('custom-logo', array(
-            'height'      => 250,
-            'width'       => 250,
-            'flex-width'  => true,
-            'flex-height' => true,
-        ));
+        'height'      => 250,
+        'width'       => 250,
+        'flex-width'  => true,
+        'flex-height' => true,
+    ));
 }
 
 add_action('after_setup_theme', 'oxhu_setup');
@@ -113,14 +114,14 @@ add_action('after_setup_theme', 'oxhu_content_width', 0);
 function oxhu_widgets_init()
 {
     register_sidebar(array(
-            'name'          => esc_html__('Sidebar', 'oxhu'),
-            'id'            => 'sidebar-1',
-            'description'   => esc_html__('Add widgets here.', 'oxhu'),
-            'before_widget' => '<section id="%1$s" class="widget %2$s">',
-            'after_widget'  => '</section>',
-            'before_title'  => '<h2 class="widget-title">',
-            'after_title'   => '</h2>',
-        ));
+        'name'          => esc_html__('Sidebar', 'oxhu'),
+        'id'            => 'sidebar-1',
+        'description'   => esc_html__('Add widgets here.', 'oxhu'),
+        'before_widget' => '<section id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title">',
+        'after_title'   => '</h2>',
+    ));
 }
 
 add_action('widgets_init', 'oxhu_widgets_init');
@@ -185,8 +186,10 @@ if (class_exists('WooCommerce')) {
 add_filter('nav_menu_css_class', 'oxhu_css_attributes_filter', 100, 1);
 add_filter('nav_menu_item_id', 'oxhu_css_attributes_filter', 100, 1);
 add_filter('page_css_class', 'oxhu_css_attributes_filter', 100, 1);
-function oxhu_css_attributes_filter($var) {
-  return is_array($var) ? array_intersect($var, array('main-menu__list-item', 'current-menu-item')) : '';
+function oxhu_css_attributes_filter($var)
+{
+    return is_array($var) ? array_intersect($var,
+        array('main-menu__list-item', 'current-menu-item')) : '';
 }
 
 
@@ -277,3 +280,28 @@ function oxhu_cleanup_query_string($src)
 
 add_filter('script_loader_src', 'oxhu_cleanup_query_string', 15, 1);
 add_filter('style_loader_src', 'oxhu_cleanup_query_string', 15, 1);
+
+
+function oxhu_header_class_filter()
+{
+    if (is_front_page()) {
+        return '';
+    } else {
+        return 'header--page';
+    }
+}
+
+add_filter('input_class', 'oxhu_header_class_filter');
+
+
+function oxhu_page_padding($classes)
+{
+    if ( ! is_front_page()) {
+        $classes[] = 'pad-top';
+    }
+
+    return $classes;
+}
+
+add_filter('body_class', 'oxhu_page_padding');
+
