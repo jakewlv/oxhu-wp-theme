@@ -7,8 +7,6 @@ createIcons({
   },
   attrs: {
     class: ['oxhu-icon', 'icon'],
-    stroke: 'none',
-    fill: '#FFC01E',
   },
   nameAttr: 'icon-name', // attribute for the icon name.
 });
@@ -55,19 +53,3 @@ createIcons({
 //     });
 //   });
 // })(jQuery);
-
-const header = $('.header');
-let scrollPrev = 0;
-
-$(window).scroll(function () {
-  const scrolled = $(window).scrollTop();
-
-  if (scrolled > 50 && scrolled > scrollPrev) {
-    header.addClass('out').removeClass('scrolled');
-  } else {
-    header.removeClass('out').addClass('scrolled');
-  }
-
-  if (scrolled < 50) header.removeClass('scrolled');
-  scrollPrev = scrolled;
-});

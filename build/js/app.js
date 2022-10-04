@@ -3785,9 +3785,7 @@ __webpack_require__.r(__webpack_exports__);
     Star: lucide__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   attrs: {
-    "class": ['oxhu-icon', 'icon'],
-    stroke: 'none',
-    fill: '#FFC01E'
+    "class": ['oxhu-icon', 'icon']
   },
   nameAttr: 'icon-name' // attribute for the icon name.
 
@@ -3834,21 +3832,6 @@ __webpack_require__.r(__webpack_exports__);
 //     });
 //   });
 // })(jQuery);
-
-var header = $('.header');
-var scrollPrev = 0;
-$(window).scroll(function () {
-  var scrolled = $(window).scrollTop();
-
-  if (scrolled > 50 && scrolled > scrollPrev) {
-    header.addClass('out').removeClass('scrolled');
-  } else {
-    header.removeClass('out').addClass('scrolled');
-  }
-
-  if (scrolled < 50) header.removeClass('scrolled');
-  scrollPrev = scrolled;
-});
 
 /***/ }),
 

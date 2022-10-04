@@ -31,7 +31,8 @@ wp_body_open(); ?>
   <a class="skip-link screen-reader-text" href="#primary"><?php
       esc_html_e('Skip to content', 'oxhu'); ?></a>
 
-  <header id="header" class="header  <?php echo apply_filters('input_class', ''); ?> grid-full-width">
+  <header id="header" class="header  <?php
+  echo apply_filters('input_class', ''); ?> grid-full-width">
     <div class="site-branding">
         <?php
         the_custom_logo();
@@ -59,21 +60,24 @@ wp_body_open(); ?>
         endif; ?>
     </div>
 
+      <?php
+      get_template_part('template-parts/menus/main-menu', 'main-menu'); ?>
 
-    <nav id='main-menu' class="main-menu">
-        <?php
-        wp_nav_menu(array(
-            'theme_location'  => 'main-menu',
-            'menu_class'      => 'main-menu__list',
-            'items_wrap'      => '<ul class="%2$s" role="list" >%3$s</ul>',
-            'container'       => '',
-            'list_item_class' => 'main-menu__list-item',
-            'link_class'      => 'main-menu__link'
-        ));
-        ?>
-    </nav>
 
-        <nav id='member-menu' class="member-menu">
+<!--    <nav id='main-menu' class="main-menu">-->
+<!--        --><?php
+//        wp_nav_menu(array(
+//            'theme_location'  => 'main-menu',
+//            'menu_class'      => 'main-menu__list',
+//            'items_wrap'      => '<ul class="%2$s" role="list" >%3$s</ul>',
+//            'container'       => '',
+//            'list_item_class' => 'main-menu__list-item',
+//            'link_class'      => 'main-menu__link'
+//        ));
+//        ?>
+<!--    </nav>-->
+
+    <nav id='member-menu' class="member-menu">
         <?php
         wp_nav_menu(array(
             'theme_location'  => 'member-menu',
