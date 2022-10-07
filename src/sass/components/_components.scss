@@ -10,6 +10,10 @@
 --------------------------------------------- */
 @import 'navigation/navigation';
 
+/* Buttons
+--------------------------------------------- */
+@import 'buttons/button';
+
 /* Hero
 --------------------------------------------- */
 @import 'hero/hero';
@@ -39,3 +43,17 @@
 /* Galleries
 --------------------------------------------- */
 @import 'media/galleries';
+
+/* Front-page
+--------------------------------------------- */
+@import 'front-page/about';
+@import 'front-page/values';
+@import 'front-page/happy-customers';
+
+/* Section
+--------------------------------------------- */
+@import 'section/section-intro';
+
+/* Image Reel
+--------------------------------------------- */
+@import 'image-reel/image-reel';

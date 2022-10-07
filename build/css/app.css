@@ -842,30 +842,43 @@ textarea {
   flex: 1 0 50%;
 }
 
-.main-menu {
+.main-menu,
+.member-menu {
   color: #fff;
   height: -moz-fit-content;
   height: fit-content;
 }
-.main-menu__list {
+.main-menu__list,
+.member-menu__list {
   padding: 0;
   margin: 0;
   display: flex;
 }
-.main-menu__list-item { /* Safari/Chrome, other WebKit */ /* Firefox, other Gecko */
+.main-menu__list-item,
+.member-menu__list-item { /* Safari/Chrome, other WebKit */ /* Firefox, other Gecko */
   box-sizing: border-box; /* Opera/IE 8+ */
 }
-.main-menu__link {
+.main-menu__link,
+.member-menu__link {
+  display: flex;
+  align-items: center;
   padding: 3rem;
-  display: block;
   text-decoration: none;
   font-weight: 600;
 }
-.main-menu__link:hover {
+.main-menu__link:hover,
+.member-menu__link:hover {
   background-color: rgba(234, 234, 234, 0.05);
 }
-.main-menu__link:visited {
+.main-menu__link:visited,
+.member-menu__link:visited {
   color: #fff;
+}
+.main-menu__link svg,
+.member-menu__link svg {
+  height: 1.8rem;
+  width: 1.8rem;
+  margin-right: 1rem;
 }
 
 .current-menu-item > .main-menu__link {
@@ -874,12 +887,36 @@ textarea {
   background-color: rgba(234, 234, 234, 0.05);
 }
 
+.current-menu-item > .member-menu__link {
+  background-color: rgba(234, 234, 234, 0.05);
+}
+
+/* Buttons
+--------------------------------------------- */
+.btn {
+  padding: 18px 48px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.82rem;
+  font-weight: 700;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.1) 100%), #e52323;
+  border-radius: 8px;
+  outline: none;
+}
+.btn:visited {
+  color: #fff;
+}
+.btn:focus {
+  outline: none;
+}
+
 /* Hero
 --------------------------------------------- */
 .hero {
   background-color: #000;
   position: relative;
-  min-height: 95rem;
+  min-height: 100vh;
   max-width: 254rem;
   align-items: center;
 }
@@ -891,7 +928,7 @@ textarea {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("http://oxhu.local/wp-content/uploads/2022/10/hero-1-1.webp");
+  background: url("https://res.cloudinary.com/cdn-oxhu/images/v1664959391/hero-1-1/hero-1-1.webp?_i=AA");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -1001,16 +1038,15 @@ textarea {
   display: flex;
   gap: 0.4rem;
 }
+.reviews__stars svg {
+  fill: #ffc01e;
+  stroke: none;
+}
 
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
   display: block;
-}
-
-.post,
-.page {
-  margin: 0 0 1.5em;
 }
 
 .updated:not(.published) {
@@ -1026,7 +1062,9 @@ textarea {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
-} /* Comments
+}
+
+/* Comments
 --------------------------------------------- */
 .comment-content a {
   word-wrap: break-word;
@@ -1128,6 +1166,136 @@ textarea {
 
 .gallery-caption {
   display: block;
+}
+
+/* Front-page
+--------------------------------------------- */
+.about {
+  justify-content: center;
+  padding: 12rem 0;
+  min-height: 100vh;
+}
+.about__inner {
+  max-width: 120.6rem;
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+}
+.about__image {
+  border-radius: 8px;
+}
+.about__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: flex-start;
+}
+.about__title {
+  /* Heading - Bold/H1 - Large - Bold */
+  font-weight: 700;
+  font-size: 36.49px;
+  line-height: 44px;
+}
+
+.values {
+  padding: 12rem 0;
+  justify-items: center;
+  align-content: center;
+}
+.values__inner {
+  max-width: 1206px;
+}
+.values__values {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+.value__icon {
+  height: 13rem;
+  width: 13rem;
+  stroke-width: 0.3px;
+  stroke: #121416;
+}
+.value__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.value__description {
+  margin: 0;
+}
+
+.happy-customers {
+  background-color: #14161a;
+  position: relative;
+  color: #fff;
+  margin-bottom: 1px;
+}
+.happy-customers:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://res.cloudinary.com/cdn-oxhu/images/v1665131578/happy-customers/happy-customers.webp?_i=AA");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  opacity: 0.3;
+}
+/* Section
+--------------------------------------------- */
+.section-intro {
+  max-width: 120.6rem;
+  margin-bottom: 9rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.section-intro--light {
+  color: #fff;
+}
+.section-intro__title {
+  position: relative;
+  color: inherit;
+  line-height: 1;
+}
+.section-intro__title:after {
+  content: "";
+  width: 65px;
+  height: 3px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 2.8rem;
+  left: 0;
+  background-color: #e52323;
+  display: block;
+}
+.section-intro__description {
+  /* Typography - SemiLight/H6 - SemiLight */
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 175%;
+}
+
+/* Image Reel
+--------------------------------------------- */
+.photo-reel__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+.photo-reel__image {
+  width: 100%;
 }
 
 /*--------------------------------------------------------------

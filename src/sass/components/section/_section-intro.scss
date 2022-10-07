@@ -1,0 +1,35 @@
+.section-intro {
+  max-width: 120.6rem;
+  margin-bottom: 9rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &--light {
+    color: $color__white;
+  }
+
+  &__title {
+    position: relative;
+    color: inherit;
+    line-height: 1;
+
+    &:after {
+      content: '';
+      width: 65px;
+      height: 3px;
+      border-radius: 8px;
+      position: absolute;
+      bottom: 2.8rem;
+      left: 0;
+      background-color: $color__brand;
+      display: block;
+    }
+  }
+
+  &__description {
+    /* Typography - SemiLight/H6 - SemiLight */
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 175%;
+  }
+}

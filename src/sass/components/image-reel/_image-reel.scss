@@ -1,0 +1,10 @@
+.photo-reel {
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+  }
+  &__image {
+    width: 100%;
+  }
+}

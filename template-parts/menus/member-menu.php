@@ -1,23 +1,27 @@
 <?php
 
 $locationDetails = get_nav_menu_locations();
-$menuID          = $locationDetails['main-menu'];
+$menuID          = $locationDetails['member-menu'];
 $menuItems       = wp_get_nav_menu_items( $menuID );
 ?>
 
-<nav class='main-menu'>
-  <ul class='main-menu__list' role='list'>
+<nav class='member-menu'>
+  <ul class='member-menu__list' role='list'>
 	  <?php
 	  // Loop over menu items
 	  foreach ( $menuItems as $menuItem ) {
 		  // Compare menu item url with server request uri path
 		  $current  = ( $_SERVER['REQUEST_URI'] == parse_url( $menuItem->url,
 				  PHP_URL_PATH ) ) ? 'current-menu-item' : '';
+		  $has_icon = ! empty( $menuItem->description )
 		  ?>
         <li class="<?php
-		echo $current ?> main-menu__list-item">
+		echo $current ?> member-menu__list-item">
 			<?php
-			echo '<a class="main-menu__link" href="' . $menuItem->url . '">';
+			echo '<a class="member-menu__link" href="' . $menuItem->url . '">';
+			if ( $has_icon ) {
+				echo '<i icon-name="' . $menuItem->description . '"></i>';
+			}
 			echo $menuItem->title;
 			echo '</a>';
 			?>

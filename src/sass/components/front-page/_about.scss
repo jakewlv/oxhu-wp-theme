@@ -1,0 +1,32 @@
+.about {
+  justify-content: center;
+  padding: 12rem 0;
+  min-height: 100vh;
+
+  &__inner {
+    max-width: 120.6rem;
+    //padding: 0 12rem;
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+  }
+
+  &__image {
+    border-radius: 8px;
+  }
+
+  &__text-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: flex-start;
+    //padding-right: 10rem;
+  }
+
+  &__title {
+    /* Heading - Bold/H1 - Large - Bold */
+    font-weight: 700;
+    font-size: 36.49px;
+    line-height: 44px;
+  }
+}

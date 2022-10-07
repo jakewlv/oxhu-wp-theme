@@ -105,7 +105,8 @@
   }
 }
 
-.main-menu {
+.main-menu,
+.member-menu {
   color: #fff;
   height: fit-content;
   //background-color: #c4c4c4;
@@ -123,8 +124,10 @@
   }
 
   &__link {
+    display: flex;
+    align-items: center;
     padding: 3rem;
-    display: block;
+    //display: block;
     text-decoration: none;
     font-weight: 600;
     &:hover {
@@ -133,11 +136,21 @@
     &:visited {
       color: #fff;
     }
+
+    svg {
+      height: 1.8rem;
+      width: 1.8rem;
+      margin-right: 1rem;
+    }
   }
 }
 
 .current-menu-item > .main-menu__link {
   border-top: solid 5px $color__brand;
   padding: 2.5rem 3rem 3rem;
+  background-color: rgba(234, 234, 234, 0.05);
+}
+
+.current-menu-item > .member-menu__link {
   background-color: rgba(234, 234, 234, 0.05);
 }

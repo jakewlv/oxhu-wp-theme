@@ -61,7 +61,10 @@ wp_body_open(); ?>
     </div>
 
       <?php
-      get_template_part('template-parts/menus/main-menu', 'main-menu'); ?>
+      get_template_part('template-parts/menus/main-menu', 'main-menu');
+      get_template_part('template-parts/menus/member-menu', 'user-menu');
+      ?>
+
 
 
 <!--    <nav id='main-menu' class="main-menu">-->
@@ -77,18 +80,18 @@ wp_body_open(); ?>
 //        ?>
 <!--    </nav>-->
 
-    <nav id='member-menu' class="member-menu">
-        <?php
-        wp_nav_menu(array(
-            'theme_location'  => 'member-menu',
-            'menu_class'      => 'member-menu__list',
-            'items_wrap'      => '<ul class="%2$s" role="list" >%3$s</ul>',
-            'container'       => '',
-            'list_item_class' => 'member-menu__list-item',
-            'link_class'      => 'member-menu__link'
-        ));
-        ?>
-    </nav>
+<!--    <nav id='member-menu' class="member-menu">-->
+<!--        --><?php
+//        wp_nav_menu(array(
+//            'theme_location'  => 'member-menu',
+//            'menu_class'      => 'member-menu__list',
+//            'items_wrap'      => '<ul class="%2$s" role="list" >%3$s</ul>',
+//            'container'       => '',
+//            'list_item_class' => 'member-menu__list-item',
+//            'link_class'      => 'member-menu__link'
+//        ));
+//        ?>
+<!--    </nav>-->
 
   </header>
 

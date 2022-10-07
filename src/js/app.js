@@ -1,9 +1,26 @@
 import Splide from '@splidejs/splide';
-import { createIcons, Star } from 'lucide';
+import {
+  createIcons,
+  Star,
+  User,
+  LogIn,
+  LogOut,
+  Medal,
+  HeartHandshake,
+  Smile,
+  HeartPulse,
+} from 'lucide';
 
 createIcons({
   icons: {
     Star,
+    User,
+    LogIn,
+    LogOut,
+    Medal,
+    HeartHandshake,
+    Smile,
+    HeartPulse,
   },
   attrs: {
     class: ['oxhu-icon', 'icon'],

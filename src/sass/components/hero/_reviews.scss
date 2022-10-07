@@ -52,5 +52,10 @@
     line-height: 1;
     display: flex;
     gap: 0.4rem;
+
+    svg {
+      fill: #ffc01e;
+      stroke: none;
+    }
   }
 }

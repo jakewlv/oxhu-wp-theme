@@ -3778,11 +3778,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _splidejs_splide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @splidejs/splide */ "./node_modules/@splidejs/splide/dist/js/splide.esm.js");
 /* harmony import */ var lucide__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lucide */ "./node_modules/lucide/dist/esm/lucide.js");
 /* harmony import */ var lucide__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lucide */ "./node_modules/lucide/dist/esm/icons/star.js");
+/* harmony import */ var lucide__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lucide */ "./node_modules/lucide/dist/esm/icons/user.js");
+/* harmony import */ var lucide__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lucide */ "./node_modules/lucide/dist/esm/icons/log-in.js");
+/* harmony import */ var lucide__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! lucide */ "./node_modules/lucide/dist/esm/icons/log-out.js");
+/* harmony import */ var lucide__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lucide */ "./node_modules/lucide/dist/esm/icons/medal.js");
+/* harmony import */ var lucide__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! lucide */ "./node_modules/lucide/dist/esm/icons/heart-handshake.js");
+/* harmony import */ var lucide__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! lucide */ "./node_modules/lucide/dist/esm/icons/smile.js");
+/* harmony import */ var lucide__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! lucide */ "./node_modules/lucide/dist/esm/icons/heart-pulse.js");
 
 
 (0,lucide__WEBPACK_IMPORTED_MODULE_1__.createIcons)({
   icons: {
-    Star: lucide__WEBPACK_IMPORTED_MODULE_2__["default"]
+    Star: lucide__WEBPACK_IMPORTED_MODULE_2__["default"],
+    User: lucide__WEBPACK_IMPORTED_MODULE_3__["default"],
+    LogIn: lucide__WEBPACK_IMPORTED_MODULE_4__["default"],
+    LogOut: lucide__WEBPACK_IMPORTED_MODULE_5__["default"],
+    Medal: lucide__WEBPACK_IMPORTED_MODULE_6__["default"],
+    HeartHandshake: lucide__WEBPACK_IMPORTED_MODULE_7__["default"],
+    Smile: lucide__WEBPACK_IMPORTED_MODULE_8__["default"],
+    HeartPulse: lucide__WEBPACK_IMPORTED_MODULE_9__["default"]
   },
   attrs: {
     "class": ['oxhu-icon', 'icon']
