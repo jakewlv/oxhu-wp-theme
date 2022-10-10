@@ -22,14 +22,10 @@ get_template_part( 'template-parts/front-page/hero', 'hero' );
 get_template_part( 'template-parts/front-page/about', 'about' );
 get_template_part( 'template-parts/front-page/values', 'values' );
 get_template_part( 'template-parts/front-page/happy-customers', 'happy-customers' );
+get_template_part( 'template-parts/front-page/latest-news', 'latest-news' );
 ?>
-
-  <main id="primary" class="site-main content-grid">
-
-
-  </main><!-- #main -->
 
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

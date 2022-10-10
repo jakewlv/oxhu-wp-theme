@@ -7,11 +7,10 @@
 
 ?>
 
-<section class='values grid-centered'>
-
-  <div class='values__inner'>
+<section class='values content-grid'>
+  <div class='values__inner grid-centered'>
     <div class='section-intro'>
-      <h1 class='section-intro__title'>Visions & Values</h1>
+      <h1 class='section-intro__title section-intro__title--dark'>Visions & Values</h1>
       <p class='section-intro__description'>Commodo a non in nec, odio ridiculus malesuada congue
         sit
         maecenas magnis tellus imperdiet cras pretium</p>

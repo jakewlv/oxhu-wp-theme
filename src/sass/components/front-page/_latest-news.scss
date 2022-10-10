@@ -1,0 +1,45 @@
+.latest-news {
+  padding: 12rem 0;
+  justify-items: center;
+  align-content: center;
+
+  &__posts {
+    border-bottom: 1px solid rgba(97, 97, 97, 0.2);
+    border-top: 1px solid rgba(97, 97, 97, 0.2);
+  }
+
+  &__post {
+    display: flex;
+    padding: 3rem 0.5rem;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba(97, 97, 97, 0.2);
+    }
+  }
+
+  &__post-aside {
+    margin-right: 15rem;
+    min-width: fit-content;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: $color__text-heading;
+  }
+
+  &__post-date {
+    font-weight: 600;
+    color: $color__brand;
+    display: block;
+  }
+
+  &__post-title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+    margin-bottom: 1.8rem;
+
+    a {
+      text-decoration: none;
+      color: $color__text-heading;
+    }
+  }
+}

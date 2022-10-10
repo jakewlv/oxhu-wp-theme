@@ -1,3 +1,4 @@
+import '@splidejs/splide/css/core';
 import Splide from '@splidejs/splide';
 import {
   createIcons,
@@ -70,3 +71,55 @@ createIcons({
 //     });
 //   });
 // })(jQuery);
+
+// When the user scrolls down 80px from the top of the document, the header hides.
+// When the user scrolls up, the header shows.
+const body = document.body;
+const header = document.querySelector('.header');
+const headerFront = document.querySelector('.header--front');
+const scrollUp = 'scroll-up';
+const scrollDown = 'scroll-down';
+let lastScroll = 0;
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= 50) {
+    body.classList.remove(scrollUp);
+    return;
+  }
+
+  if (currentScroll > lastScroll && !body.classList.contains(scrollDown)) {
+    // down
+    body.classList.remove(scrollUp);
+    body.classList.add(scrollDown);
+  } else if (
+    currentScroll < lastScroll &&
+    body.classList.contains(scrollDown)
+  ) {
+    // up
+    body.classList.remove(scrollDown);
+    body.classList.add(scrollUp);
+  }
+  lastScroll = currentScroll;
+});
+
+// When the user scrolls down 80px from the top of the document, change the header's background
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+    header.style.backgroundColor = '#121416f2';
+  } else {
+    header.style.backgroundColor = '';
+  }
+}
+
+new Splide('.splide', {
+  type: 'loop',
+  perPage: 3,
+  rewind: true,
+  autoplay: true,
+  arrows: false,
+}).mount();

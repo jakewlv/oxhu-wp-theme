@@ -1,8 +1,8 @@
 .section-intro {
-  max-width: 120.6rem;
   margin-bottom: 9rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  //color: $color__text-heading;
 
   &--light {
     color: $color__white;
@@ -13,13 +13,17 @@
     color: inherit;
     line-height: 1;
 
+    &--dark {
+      color: $color__text-heading;
+    }
+
     &:after {
       content: '';
       width: 65px;
       height: 3px;
       border-radius: 8px;
       position: absolute;
-      bottom: 2.8rem;
+      bottom: 3.4rem;
       left: 0;
       background-color: $color__brand;
       display: block;
@@ -31,5 +35,6 @@
     font-weight: 300;
     font-size: 18px;
     line-height: 175%;
+    color: inherit;
   }
 }

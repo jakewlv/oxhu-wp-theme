@@ -7,8 +7,8 @@
 
 ?>
 
-<section class='about grid-centered'>
-  <div class='about__inner'>
+<section class='about content-grid'>
+  <div class='about__inner grid-centered'>
     <img
       src='https://res.cloudinary.com/cdn-oxhu/images/v1664959787/about-image/about-image.webp?_i=AA'
       alt='man with ropes' class='about__image'>
@@ -27,13 +27,14 @@
 	  <?php
 	  $args = [
 		  'post_type' => 'image-reel',
-		  'tax_query' => [
-			  [
-				  'taxonomy' => 'category',
-				  'field'    => 'slug',
-				  'terms'    => 'frontpage-top'
-			  ]
-		  ]
+		  's'         => 'frontpage-top',
+		  //		  'tax_query' => [
+		  //			  [
+		  //				  'taxonomy' => 'category',
+		  //				  'field'    => 'slug',
+		  //				  'terms'    => 'frontpage-top'
+		  //			  ]
+		  //		  ]
 	  ];
 
 	  $query = new WP_Query( $args );

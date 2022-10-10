@@ -1,8 +1,8 @@
 .happy-customers {
+  padding: 12rem 0;
   background-color: #14161a;
   position: relative;
-  color: $color__white;
-  //min-height: 75rem;
+  //color: $color__white;
   margin-bottom: 1px;
 
   &:before {
@@ -20,6 +20,66 @@
     opacity: 0.3;
   }
 
-  &__inner {
+  &__testimonial {
+    background-color: #fff;
+    color: inherit;
+    display: flex;
+    padding: 3.2rem;
+    gap: 3rem;
+    border-radius: 8px;
+    max-width: 54rem;
+    position: relative;
+  }
+
+  &__avatar {
+    height: 8rem;
+    width: 8rem;
+  }
+
+  &__quote {
+    position: absolute;
+    top: 1.5rem;
+    font-size: 12rem;
+    font-weight: 900;
+    line-height: 1;
+    text-align: left;
+    color: #eee;
+  }
+
+  &__testimonial-text {
+    padding-top: 6rem;
+  }
+}
+
+#happy-customers {
+  .splide {
+    &__slide {
+      //padding: 5rem 0;
+    }
+
+    &__list {
+      gap: 3rem;
+    }
+    &__pagination {
+      //display: grid;
+      display: flex;
+      padding: 5rem 0;
+      grid-column: $centered;
+      z-index: 1;
+
+      .is-active {
+        background-color: $color__brand;
+      }
+
+      &__page {
+        padding: 0;
+        height: 1.2rem;
+        width: 1.2rem;
+        border-radius: 50%;
+        border: none;
+        margin: 0 0.3rem;
+        background-color: #919191;
+      }
+    }
   }
 }

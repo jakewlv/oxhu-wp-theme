@@ -1,18 +1,27 @@
 .header {
   position: fixed;
   top: 0;
-  transition: top 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, transform 0.4s;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 6rem;
-  z-index: 1;
+  z-index: 2;
+  background-color: $color__bgDark;
 
-  &--page {
-    background-color: $color__bgDark;
+  &--front {
+    background-color: transparent;
   }
 }
 
 .site-branding {
   line-height: 0;
+}
+
+.scroll-down .header {
+  transform: translate3d(0, -100%, 0);
+}
+
+.scroll-up .header {
+  transform: none;
 }

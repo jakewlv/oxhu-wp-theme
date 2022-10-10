@@ -27,7 +27,7 @@ language_attributes(); ?>>
 body_class(); ?>>
 <?php
 wp_body_open(); ?>
-<div id="page" class="site content-grid">
+<div id="page" class="site">
   <a class="skip-link screen-reader-text" href="#primary"><?php
       esc_html_e('Skip to content', 'oxhu'); ?></a>
 
@@ -65,33 +65,6 @@ wp_body_open(); ?>
       get_template_part('template-parts/menus/member-menu', 'user-menu');
       ?>
 
-
-
-<!--    <nav id='main-menu' class="main-menu">-->
-<!--        --><?php
-//        wp_nav_menu(array(
-//            'theme_location'  => 'main-menu',
-//            'menu_class'      => 'main-menu__list',
-//            'items_wrap'      => '<ul class="%2$s" role="list" >%3$s</ul>',
-//            'container'       => '',
-//            'list_item_class' => 'main-menu__list-item',
-//            'link_class'      => 'main-menu__link'
-//        ));
-//        ?>
-<!--    </nav>-->
-
-<!--    <nav id='member-menu' class="member-menu">-->
-<!--        --><?php
-//        wp_nav_menu(array(
-//            'theme_location'  => 'member-menu',
-//            'menu_class'      => 'member-menu__list',
-//            'items_wrap'      => '<ul class="%2$s" role="list" >%3$s</ul>',
-//            'container'       => '',
-//            'list_item_class' => 'member-menu__list-item',
-//            'link_class'      => 'member-menu__link'
-//        ));
-//        ?>
-<!--    </nav>-->
 
   </header>
 

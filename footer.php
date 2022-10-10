@@ -11,7 +11,7 @@
 
 ?>
 
-<footer id="colophon" class="site-footer grid-full-width">
+<footer id="colophon" class="footer grid-full-width">
   <div class="site-info">
     <span class='copy'>&copy; <?php
         echo date("Y"); ?></span>
@@ -24,6 +24,7 @@
   </div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
+
 
 <?php wp_footer(); ?>
 
