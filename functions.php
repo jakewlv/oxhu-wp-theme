@@ -308,5 +308,17 @@ function oxhu_page_padding($classes)
 add_filter('body_class', 'oxhu_page_padding');
 
 
-
-
+///**
+// * Disable standard editor and Gutenberg for the homepage
+// * keeping the status (enabled/disabled) for others who uses the same filter (i.e. ACF)
+// */
+//add_filter( 'use_block_editor_for_post', 'oxhu_hide_editor', 10, 2 );
+//function oxhu_hide_editor( $use_block_editor, $post_type ) {
+//	if ( (int) get_option( 'page_on_front' ) == get_the_ID() ) { // on frontpage
+//		remove_post_type_support( 'page', 'editor' ); // disable standard editor
+//
+//		return false; // and disable gutenberg
+//	}
+//
+//	return $use_block_editor; // keep gutenberg status for other pages/posts
+//}

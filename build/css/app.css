@@ -774,10 +774,103 @@ textarea {
 /* Footer
 --------------------------------------------- */
 .footer {
-  padding: 12rem 0;
+  padding: 9rem 0;
   justify-items: center;
   align-content: center;
   background-color: rgb(18, 20, 22);
+}
+.footer__cols {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__logo {
+  display: flex;
+  justify-self: center;
+}
+.footer__social-links {
+  display: flex;
+  justify-self: center;
+}
+.footer__inner {
+  width: 100%;
+  grid-row: 1;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.subscribe__form {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.subscribe__form label {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  display: block;
+}
+.subscribe__form input[type=email] {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  min-width: 37rem;
+  background-color: #212121;
+  outline: none;
+  border: none;
+  margin-right: 0.5rem;
+}
+.subscribe__form input[type=submit] {
+  border-radius: 8px;
+  padding: 1.6rem 3rem;
+  background-color: #e52323;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.subscribe__description {
+  text-align: center;
+  color: #bababa;
+  font-weight: 400;
+  max-width: 35rem;
+}
+
+.links-category__link {
+  display: block;
+  color: #bababa !important;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+.links-category__link:not(:last-child) {
+  margin-bottom: 0.6rem;
+}
+.links-category__link:hover {
+  color: #fff !important;
+}
+.links-category__title {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.site-info {
+  width: 100%;
+  text-align: center;
+  padding: 3rem 0;
+  background-color: rgb(18, 20, 22);
+}
+.site-info a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
 }
 
 /* Navigation
@@ -793,11 +886,12 @@ textarea {
 .member-menu__link {
   display: flex;
   align-items: center;
-  padding: 3rem;
+  padding: 3rem 2.4rem;
   text-decoration: none;
   font-weight: 600;
   color: #fff;
   outline: none !important;
+  transition: background-color 0.3s ease-in-out;
 }
 .main-menu__link:hover,
 .member-menu__link:hover {
@@ -807,8 +901,10 @@ textarea {
 .member-menu__link:visited {
   color: #fff;
 }
-.main-menu__link svg,
-.member-menu__link svg {
+.main-menu__icon,
+.member-menu__icon {
+  display: flex;
+  align-content: center;
   height: 1.8rem;
   width: 1.8rem;
   margin-right: 1rem;
@@ -816,7 +912,7 @@ textarea {
 
 .current-menu-item > .main-menu__link {
   border-top: solid 5px #e52323;
-  padding: 2.5rem 3rem 3rem;
+  padding: 2.5rem 2.4rem 3rem;
   background-color: rgba(234, 234, 234, 0.05);
 }
 
@@ -850,26 +946,20 @@ textarea {
   background-color: #000;
   position: relative;
   min-height: 100vh;
-  max-width: 254rem;
   align-items: center;
 }
-.hero:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
+.hero__image {
+  grid-row: 1;
+  line-height: 0;
+  min-height: 100%;
   width: 100%;
-  height: 100%;
-  background: url("https://res.cloudinary.com/cdn-oxhu/images/v1664959391/hero-1-1/hero-1-1.webp?_i=AA");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
+  -o-object-fit: cover;
+     object-fit: cover;
   opacity: 0.8;
 }
 .hero__inner {
-  padding: 0 15.5rem;
-  position: relative;
+  grid-row: 1;
+  z-index: 1;
 }
 
 .caption {
@@ -896,9 +986,6 @@ textarea {
   line-height: 6.58rem;
   font-weight: 800;
   text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
-}
-.caption__title span {
-  color: #e52323;
 }
 .caption__subtitle {
   font-size: 1.8rem;
@@ -1210,9 +1297,6 @@ textarea {
   padding-top: 6rem;
 }
 
-#happy-customers .splide__list {
-  gap: 3rem;
-}
 #happy-customers .splide__pagination {
   display: flex;
   padding: 5rem 0;
@@ -1249,9 +1333,7 @@ textarea {
   border-bottom: 1px solid rgba(97, 97, 97, 0.2);
 }
 .latest-news__post-aside {
-  margin-right: 15rem;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
+  min-width: 44rem;
   text-transform: uppercase;
   font-weight: 700;
   color: #101010;
@@ -1318,6 +1400,9 @@ textarea {
 }
 .photo-reel__image {
   width: 100%;
+  min-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /*--------------------------------------------------------------

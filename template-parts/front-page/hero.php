@@ -5,65 +5,50 @@
  * @package oxhu
  */
 
+$heroImage = get_field('hero_image');
+$heroButton = get_field('hero_button');
 ?>
 
-<section class='hero grid-full-width'>
-  <div class='hero__inner'>
+
+<section class='hero content-grid'>
+
+  <div class='hero__inner grid-centered'>
     <div class='hero__caption caption'>
       <div class='caption__text'>
         <p class='caption__eyebrow'>
-          Euismod rhoncus arcu.
+			<?php
+			echo get_field( 'hero_eyebrow' ) ?>
         </p>
 
         <h1 class='caption__title'>
-          Start your <span>fitness</span><br>
-          journey today
+			<?php
+			echo get_field( 'hero_title' ) ?>
         </h1>
         <p class='caption__subtitle'>
-          On your marks, get set, go! Gravida mattis velit ultrices euismod faucibus etiam massa.
-          Pretium, imperdiet quam eu cras habitant sagittis, malesuada sit.
+			<?php
+			echo get_field( 'hero_text' ) ?>
         </p>
       </div>
-      <a href='#' class='btn caption__btn'>Get started</a>
+      <a href='<?php
+      echo $heroButton['url'] ?>' class='btn caption__btn'><?php
+	      echo $heroButton['title'] ?></a>
 
     </div>
 
     <div class='hero__reviews reviews'>
-      <div class='reviews__images'>
-        <div class='reviews__review'>
-          <img src='http://oxhu.local/wp-content/uploads/2022/10/review-01.webp' alt='user avatar'
-               class='review__avatar'>
-        </div>
-        <div class='reviews__review'>
-          <img src='http://oxhu.local/wp-content/uploads/2022/10/review-02.webp' alt='user avatar'
-               class='review__avatar'>
-        </div>
-        <div class='reviews__review'>
-          <img src='http://oxhu.local/wp-content/uploads/2022/10/review-03.webp' alt='user avatar'
-               class='review__avatar'>
-        </div>
-        <div class='reviews__review'>
-          <img src='http://oxhu.local/wp-content/uploads/2022/10/review-04.webp' alt='user avatar'
-               class='review__avatar'>
-        </div>
-        <div class='reviews__review'>
-          <span>1k+</span>
-        </div>
-      </div>
-      <div class='reviews__text'>
-        <div class='reviews__stars'>
-          <i icon-name="star"></i>
-          <i icon-name="star"></i>
-          <i icon-name="star"></i>
-          <i icon-name="star"></i>
-          <i icon-name="star"></i>
-        </div>
-        <a href='#' class='reviews__reviews-number'>1000+ Reviews</a>
+	    <?php
+	    get_template_part( 'template-parts/content', 'reviews' ); ?>
 
       </div>
-
     </div>
   </div>
 
-
+  <img src='<?php
+  echo $heroImage['url']; ?>' alt='<?php
+  echo $heroImage['alt'] ?>'
+       class='hero__image grid-full-width'>
+  <?php wp_reset_postdata(); ?>
 </section>
+
+
+

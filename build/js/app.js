@@ -3895,7 +3895,9 @@ new _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__["default"]('.splide', {
   perPage: 3,
   rewind: true,
   autoplay: true,
-  arrows: false
+  arrows: false,
+  gap: '3rem',
+  focus: 'center'
 }).mount();
 
 /***/ }),

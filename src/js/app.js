@@ -122,4 +122,6 @@ new Splide('.splide', {
   rewind: true,
   autoplay: true,
   arrows: false,
+  gap: '3rem',
+  focus: 'center',
 }).mount();

@@ -20,7 +20,7 @@ $menuItems       = wp_get_nav_menu_items( $menuID );
 			<?php
 			echo '<a class="member-menu__link" href="' . $menuItem->url . '">';
 			if ( $has_icon ) {
-				echo '<i icon-name="' . $menuItem->description . '"></i>';
+				echo '<div class="member-menu__icon"><i icon-name="' . $menuItem->description . '"></i></div>';
 			}
 			echo $menuItem->title;
 			echo '</a>';

@@ -8,38 +8,45 @@
 ?>
 
 <?php
-$args = [
+$argsTests = [
 	'post_type' => 'testimonials',
-//	's'         => 'frontpage-bottom',
-	//		  'tax_query' => [
-	//			  [
-	//				  'taxonomy' => 'category',
-	//				  'field'    => 'slug',
-	//				  'terms'    => 'frontpage-bottom'
-	//			  ]
-	//		  ]
 ];
 
-$query = new WP_Query( $args );
+$testimonials = new WP_Query( $argsTests );
 ?>
 
 <section id='happy-customers' class='happy-customers content-grid splide'>
   <div class='happy-customer__inner grid-centered'>
     <div class='section-intro section-intro--light'>
-      <h1 class='section-intro__title'>Happy Customers</h1>
-      <p class='section-intro__description'>Commodo a non in nec, odio ridiculus malesuada congue
-        sit
-        maecenas magnis tellus imperdiet cras pretium</p>
+
+	    <?php
+	    if ( have_rows( 'happy_customers' ) ): ?>
+		    <?php
+		    while ( have_rows( 'happy_customers' ) ): the_row();
+
+			    // Get sub field values.
+			    $happyCustomersTitle = get_sub_field( 'happy_customers_title' );
+			    $happyCustomersDescription = get_sub_field( 'happy_customers_description' );
+			    ?>
+
+          <h1 class='section-intro__title'><?php echo $happyCustomersTitle ?></h1>
+          <p class='section-intro__description'><?php echo $happyCustomersDescription ?></p>
+
+		    <?php
+		    endwhile; ?>
+	      <?php
+	      wp_reset_postdata() ?>
+	    <?php
+	    endif; ?>
     </div>
   </div>
 
-
 	<?php
-	if ( $query->have_posts() ) : ?>
+	if ( $testimonials->have_posts() ) : ?>
       <div class="splide__track grid-full-width">
         <ul class="splide__list">
 			<?php
-			while ( $query->have_posts() ) : $query->the_post(); ?>
+			while ( $testimonials->have_posts() ) : $testimonials->the_post(); ?>
 
               <li class="splide__slide happy-customers__testimonial">
 
@@ -57,35 +64,10 @@ $query = new WP_Query( $args );
 			endwhile; ?>
         </ul>
       </div>
+		<?php
+		wp_reset_postdata() ?>
 	<?php
 	endif; ?>
-
-
-
-
-
 </section>
 
-<!--<section class='photo-reel grid-full-width'>-->
-<!--  <div class='photo-reel__inner'>-->
-<!---->
-<!---->
-<!--	  --><?php
-//	  if ( $query->have_posts() ) : ?>
-<!---->
-<!--		  --><?php
-//		  while ( $query->have_posts() ) : $query->the_post(); ?>
-<!--            <img src='--><?php
-//			echo get_field( 'first_image' ) ?><!--' alt='' class='photo-reel__image'>-->
-<!--            <img src='--><?php
-//			echo get_field( 'second_image' ) ?><!--' alt='' class='photo-reel__image'>-->
-<!--            <img src='--><?php
-//			echo get_field( 'third_image' ) ?><!--' alt='' class='photo-reel__image'>-->
-<!--		  --><?php
-//		  endwhile; ?>
-<!---->
-<!--	  --><?php
-//	  endif; ?>
-<!--  </div>-->
-<!---->
-<!--</section>-->
+

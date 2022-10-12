@@ -14,12 +14,15 @@
 
 get_header();
 
+$id = get_the_ID();
+
 ?>
 
 
 <?php
 get_template_part( 'template-parts/front-page/hero', 'hero' );
 get_template_part( 'template-parts/front-page/about', 'about' );
+get_template_part( 'template-parts/content', 'photo-reel' );
 get_template_part( 'template-parts/front-page/values', 'values' );
 get_template_part( 'template-parts/front-page/happy-customers', 'happy-customers' );
 get_template_part( 'template-parts/front-page/latest-news', 'latest-news' );

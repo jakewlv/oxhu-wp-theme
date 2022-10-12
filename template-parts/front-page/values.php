@@ -10,45 +10,39 @@
 <section class='values content-grid'>
   <div class='values__inner grid-centered'>
     <div class='section-intro'>
-      <h1 class='section-intro__title section-intro__title--dark'>Visions & Values</h1>
-      <p class='section-intro__description'>Commodo a non in nec, odio ridiculus malesuada congue
-        sit
-        maecenas magnis tellus imperdiet cras pretium</p>
+      <h1 class='section-intro__title section-intro__title--dark'><?php
+		  echo get_field( 'values_title' ) ?></h1>
+      <p class='section-intro__description'><?php
+		  echo get_field( 'values_description' ) ?></p>
     </div>
     <div class='values__values'>
-      <div class='values__value value'>
-        <i icon-name='heart-pulse' class='value__icon'></i>
-        <div class='value__text-container'>
-          <h2 class='value__title'>Live Well</h2>
-          <p class='value__description'>Make your lives a masterpiece, you only get one canvas.</p>
-        </div>
-      </div>
-      <div class='values__value value'>
-        <i icon-name='medal' class='value__icon'></i>
-        <div class='value__text-container'>
-          <h2 class='value__title'>Do Your Best</h2>
-          <p class='value__description'>You may not always be the best, yet you can always do your
-            best..</p>
-        </div>
-      </div>
-      <div class='values__value value'>
-        <i icon-name='heart-handshake' class='value__icon'></i>
-        <div class='value__text-container'>
-          <h2 class='value__title'>Be Kind</h2>
-          <p class='value__description'>Be kind, for everyone you meet is fighting a battle you know
-            nothing about.</p>
-        </div>
-      </div>
-      <div class='values__value value'>
-        <i icon-name='smile' class='value__icon'></i>
-        <div class='value__text-container'>
-          <h2 class='value__title'>Be Happy</h2>
-          <p class='value__description'>Life is like a roller coaster, live it, be happy, enjoy
-            life.</p>
-        </div>
-      </div>
-    </div>
 
+
+		<?php
+		$args = [
+			'post_type'      => 'values',
+			'posts_per_page' => - 1
+		];
+
+		$query = new WP_Query( $args );
+		?>
+
+		<?php
+		if ( $query->have_posts() ) : ?>
+
+			<?php
+			while ( $query->have_posts() ) : $query->the_post(); ?>
+
+				<?php
+				get_template_part( 'template-parts/content', 'value' );
+				?>
+			<?php
+			endwhile; ?>
+			<?php
+			wp_reset_postdata() ?>
+		<?php
+		endif; ?>
+    </div>
   </div>
 </section>
 
