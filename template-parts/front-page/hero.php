@@ -21,8 +21,9 @@ $heroButton = get_field('hero_button');
         </p>
 
         <h1 class='caption__title'>
-			<?php
-			echo get_field( 'hero_title' ) ?>
+	        <?php
+	        $heroTitle = strip_tags( get_field( 'hero_title' ), '<span><br>' );
+	        echo $heroTitle ?>
         </h1>
         <p class='caption__subtitle'>
 			<?php

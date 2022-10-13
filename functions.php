@@ -322,3 +322,8 @@ add_filter('body_class', 'oxhu_page_padding');
 //
 //	return $use_block_editor; // keep gutenberg status for other pages/posts
 //}
+
+add_filter('use_block_editor_for_post_type', 'oxhu_disable_block_editor');
+function oxhu_disable_block_editor($use_block_editor) {
+	return false;
+}

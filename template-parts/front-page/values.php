@@ -19,10 +19,11 @@
 
 
 		<?php
-		$args = [
-			'post_type'      => 'values',
-			'posts_per_page' => - 1
-		];
+	$args = [
+		'post_type'      => 'values',
+		'posts_per_page' => 4,
+		'order'          => 'ASC'
+	];
 
 		$query = new WP_Query( $args );
 		?>

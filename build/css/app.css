@@ -951,11 +951,14 @@ textarea {
 .hero__image {
   grid-row: 1;
   line-height: 0;
-  min-height: 100%;
+  max-height: 100vh;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  opacity: 0.8;
+  -o-object-position: bottom center;
+     object-position: bottom center;
+  opacity: 0.75;
+  transform: scaleX(-1);
 }
 .hero__inner {
   grid-row: 1;
@@ -986,6 +989,9 @@ textarea {
   line-height: 6.58rem;
   font-weight: 800;
   text-shadow: 0px 0px 50px rgba(0, 0, 0, 0.5);
+}
+.caption__title span {
+  color: #e52323;
 }
 .caption__subtitle {
   font-size: 1.8rem;
@@ -1202,7 +1208,10 @@ textarea {
   justify-self: center;
 }
 .about__image {
-  border-radius: 8px;
+  max-width: 540px;
+  min-height: 420px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .about__text-container {
   display: flex;
@@ -1252,9 +1261,12 @@ textarea {
 
 .happy-customers {
   padding: 12rem 0;
-  background-color: #14161a;
   position: relative;
   margin-bottom: 1px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  z-index: 0;
 }
 .happy-customers:before {
   content: "";
@@ -1264,11 +1276,12 @@ textarea {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("https://res.cloudinary.com/cdn-oxhu/images/v1665131578/happy-customers/happy-customers.webp?_i=AA");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
-  opacity: 0.3;
+  opacity: 0.65;
+  background-color: #000000;
+  z-index: 1;
+}
+.happy-customers__inner, .happy-customers__testimonials {
+  z-index: 2;
 }
 .happy-customers__testimonial {
   background-color: #fff;
@@ -1298,10 +1311,7 @@ textarea {
 }
 
 #happy-customers .splide__pagination {
-  display: flex;
-  padding: 5rem 0;
-  grid-column: center-start/center-end;
-  z-index: 1;
+  padding: 6rem 0;
 }
 #happy-customers .splide__pagination .is-active {
   background-color: #e52323;
@@ -1352,6 +1362,30 @@ textarea {
 .latest-news__post-title a {
   text-decoration: none;
   color: #101010;
+}
+
+/* Page
+--------------------------------------------- */
+.page-intro {
+  padding: 12rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.page-intro__title {
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  letter-spacing: -0.01em;
+}
+.page-intro__title p {
+  margin: 0;
+  padding: 0;
+}
+.page-intro__title span {
+  color: #e52323;
 }
 
 /* Section

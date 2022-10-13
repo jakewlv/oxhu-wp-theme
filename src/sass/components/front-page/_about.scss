@@ -12,7 +12,10 @@
   }
 
   &__image {
-    border-radius: 8px;
+    //border-radius: 8px;
+    max-width: 540px;
+    min-height: 420px;
+    object-fit: cover;
   }
 
   &__text-container {

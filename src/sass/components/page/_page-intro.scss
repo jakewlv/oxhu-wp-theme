@@ -1,0 +1,23 @@
+.page-intro {
+  padding: 12rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  &__title {
+    height: fit-content;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: -0.01em;
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    span {
+      color: $color__brand;
+    }
+  }
+}
