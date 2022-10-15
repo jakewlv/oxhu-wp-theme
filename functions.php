@@ -327,3 +327,17 @@ add_filter('use_block_editor_for_post_type', 'oxhu_disable_block_editor');
 function oxhu_disable_block_editor($use_block_editor) {
 	return false;
 }
+
+//function oxhu_make_responsive_image_sizes($sizes, $size) {
+//
+//	$width = $size[0];
+//
+//	if ( $width > 600 ) {
+//		return '(min-width: 768px) 322px, (min-width: 576px) 255px, calc( (100vw - 30px) / 2)';
+//	} else {
+//		return $sizes;
+//	}
+//
+//}
+//
+//add_filter('wp_calculate_image_sizes', 'oxhu_make_responsive_image_sizes', 10 , 2);

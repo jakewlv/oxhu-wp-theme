@@ -21,11 +21,16 @@
   text-align: center;
   gap: 3rem;
 
+  &:hover &__icon {
+    stroke: $color__brand;
+  }
+
   &__icon {
     height: 13rem;
     width: 13rem;
     stroke-width: 0.3px;
     stroke: #121416;
+    transition: stroke 0.3s ease-in-out;
   }
 
   &__text-container {

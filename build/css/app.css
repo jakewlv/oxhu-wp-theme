@@ -393,16 +393,16 @@ html {
 
 .content-grid {
   display: grid;
-  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] minmax(min-content, 144rem) [center-end] minmax(4rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] minmax(min-content, 120rem) [center-end] minmax(6rem, 1fr) [full-end];
 }
 .content-grid--4-col-pad {
-  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 30rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 30rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 .content-grid--8-col-pad {
-  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 15rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 .content-grid--12-col-pad {
-  grid-template-columns: [full-start] minmax(4rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(4rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 .content-grid--4-col {
   grid-template-columns: repeat(4, [col-start] minmax(min-content, 30rem) [col-end]);
@@ -951,6 +951,7 @@ textarea {
 .hero__image {
   grid-row: 1;
   line-height: 0;
+  height: 100%;
   max-height: 100vh;
   width: 100%;
   -o-object-fit: cover;
@@ -966,12 +967,12 @@ textarea {
 }
 
 .caption {
+  margin-bottom: -8rem;
   max-width: 72rem;
   color: #fff;
-  margin-bottom: 6rem;
 }
 .caption__text {
-  margin-bottom: 6rem;
+  margin-bottom: 4.5rem;
 }
 .caption__eyebrow {
   margin: 0;
@@ -1017,6 +1018,7 @@ textarea {
 
 .reviews {
   color: #fff;
+  margin-top: 6rem;
 }
 .reviews__images {
   display: flex;
@@ -1244,11 +1246,15 @@ textarea {
   text-align: center;
   gap: 3rem;
 }
+.value:hover .value__icon {
+  stroke: #e52323;
+}
 .value__icon {
   height: 13rem;
   width: 13rem;
   stroke-width: 0.3px;
   stroke: #121416;
+  transition: stroke 0.3s ease-in-out;
 }
 .value__text-container {
   display: flex;
@@ -1394,6 +1400,7 @@ textarea {
   margin-bottom: 9rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
 }
 .section-intro--light {
   color: #fff;
@@ -1425,6 +1432,10 @@ textarea {
   color: inherit;
 }
 
+.page-section {
+  padding: 12rem 0;
+}
+
 /* Image Reel
 --------------------------------------------- */
 .photo-reel__inner {
@@ -1433,10 +1444,70 @@ textarea {
   gap: 1px;
 }
 .photo-reel__image {
-  width: 100%;
-  min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+/* Team Member
+--------------------------------------------- */
+.team-member {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 6rem;
+  margin-bottom: 6rem;
+}
+.team-member__image {
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  min-width: 45rem;
+  z-index: 0;
+}
+.team-member__text {
+  padding-top: 3rem;
+}
+.team-member__name {
+  font-size: 3.649rem;
+  font-weight: 700;
+  line-height: 4.4rem;
+  margin-bottom: 1.8rem;
+}
+.team-member__title {
+  font-size: 2.278rem;
+  font-weight: 700;
+  line-height: 2.734rem;
+  color: #e52323;
+  margin-bottom: 1.8rem;
+}
+.team-member__excerpt {
+  margin-bottom: 3rem;
+}
+.team-member__social {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  height: 4.3rem;
+}
+.team-member__social-item {
+  height: 4.3rem;
+  display: flex;
+  align-items: center;
+}
+.team-member__social-link {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.team-member .read-more {
+  color: inherit;
+  margin-bottom: 3rem;
+  display: block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 /*--------------------------------------------------------------

@@ -1,0 +1,65 @@
+.team-member {
+  //display: flex;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 6rem;
+  margin-bottom: 6rem;
+
+  &__image {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    min-width: 45rem;
+    z-index: 0;
+  }
+
+  &__text {
+    //width: 74rem;
+    padding-top: 3rem;
+  }
+
+  &__name {
+    font-size: 3.649rem;
+    font-weight: 700;
+    line-height: 4.4rem;
+    margin-bottom: 1.8rem;
+  }
+
+  &__title {
+    font-size: 2.278rem;
+    font-weight: 700;
+    line-height: 2.734rem;
+    color: $color__brand;
+    margin-bottom: 1.8rem;
+  }
+
+  &__excerpt {
+    margin-bottom: 3rem;
+  }
+
+  &__social {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    height: 4.3rem;
+  }
+
+  &__social-item {
+    height: 4.3rem;
+    display: flex;
+    align-items: center;
+  }
+
+  &__social-link {
+    height: fit-content;
+  }
+
+  .read-more {
+    color: inherit;
+    margin-bottom: 3rem;
+    display: block;
+    max-width: fit-content;
+  }
+}

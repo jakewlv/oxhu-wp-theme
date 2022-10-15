@@ -34,13 +34,15 @@ $heroButton = get_field('hero_button');
       echo $heroButton['url'] ?>' class='btn caption__btn'><?php
 	      echo $heroButton['title'] ?></a>
 
-    </div>
-
-    <div class='hero__reviews reviews'>
-	    <?php
-	    get_template_part( 'template-parts/content', 'reviews' ); ?>
+      <div class='hero__reviews reviews'>
+	      <?php
+	      get_template_part( 'template-parts/content', 'reviews' ); ?>
 
       </div>
+
+    </div>
+
+
     </div>
   </div>
 

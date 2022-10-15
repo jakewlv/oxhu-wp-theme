@@ -3892,7 +3892,7 @@ function scrollFunction() {
 
 new _splidejs_splide__WEBPACK_IMPORTED_MODULE_1__["default"]('.splide', {
   type: 'loop',
-  perPage: 3,
+  perPage: 1,
   rewind: true,
   autoplay: true,
   arrows: false,

@@ -19,5 +19,5 @@ mix
       './**/*.svg',
     ] /* Reload if any file with one of these extensions is changed */,
     ignore: ['./.git', './node_modules', './build', './vendor'],
-    browser: 'Firefox',
+    browser: 'Google Chrome',
   });

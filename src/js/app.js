@@ -118,7 +118,7 @@ function scrollFunction() {
 
 new Splide('.splide', {
   type: 'loop',
-  perPage: 3,
+  perPage: 1,
   rewind: true,
   autoplay: true,
   arrows: false,
