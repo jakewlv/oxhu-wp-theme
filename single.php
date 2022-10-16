@@ -10,7 +10,9 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main grid-centered">
+  <main id="primary" class="site-main content-grid">
+
+    <div class='site-main__inner grid-centered'>
 
 		<?php
 		while ( have_posts() ) :
@@ -32,9 +34,10 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
+        </div>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

@@ -27,12 +27,12 @@ language_attributes(); ?>>
 body_class(); ?>>
 <?php
 wp_body_open(); ?>
-<div id="page" class="site">
+<div id="page" class="site" style='<?php echo is_admin_bar_showing() ? 'top: 32px' : ''; ?>'>
   <a class="skip-link screen-reader-text" href="#primary"><?php
       esc_html_e('Skip to content', 'oxhu'); ?></a>
 
-  <header id="header" class="header  <?php
-  echo apply_filters('input_class', ''); ?> grid-full-width">
+  <header id="header" class="header <?php
+  echo apply_filters('input_class', ''); ?> grid-full-width" style='<?php echo is_admin_bar_showing() ? 'top: 32px' : ''; ?>'>
     <div class="site-branding">
         <?php
         the_custom_logo();
@@ -61,8 +61,8 @@ wp_body_open(); ?>
     </div>
 
       <?php
-      get_template_part('template-parts/menus/main-menu', 'main-menu');
-      get_template_part('template-parts/menus/member-menu', 'user-menu');
+      get_template_part('template-parts/menus/menu', 'main');
+      get_template_part('template-parts/menus/menu', 'member');
       ?>
 
 

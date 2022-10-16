@@ -15,7 +15,10 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main grid-centered">
+  <main id="primary" class="site-main content-grid">
+
+    <div class='site-main__inner grid-centered'>
+
      <h1 class='entry-title'> <?php single_post_title(); ?> </h1>
 
 		<?php
@@ -50,9 +53,10 @@ get_header();
 
 		endif;
 		?>
+    </div>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();
